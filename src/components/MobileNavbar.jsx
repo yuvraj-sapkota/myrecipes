@@ -2,13 +2,37 @@ import { Facebook, Instagram, Menu, Search, X, Youtube } from "lucide-react";
 import LogoNavBar from "../../public/images/LogoNavBar.png";
 import logo from "../../public/images/LogoNavBar.png";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const MobileNavbar = () => {
-  const [isOpen, setIsOpen] = useState("yuvraj");
+  const [isOpen, setIsOpen] = useState(false);
+
+  const menuList = [
+    {
+      id: 1,
+      menuName: "Home",
+      path: "/",
+    },
+    {
+      id: 2,
+      menuName: "Recipes",
+      path: "/recipes",
+    },
+    {
+      id: 3,
+      menuName: "Cooking tips",
+      path: "/cooking",
+    },
+    {
+      id: 4,
+      menuName: "About us",
+      path: "/about",
+    },
+  ];
   return (
     //  mobile navbar
-    <div className="relative z-20">
-      <div className="p-4">
+    <div className="relative z-20 ">
+      <div className="py-4">
         <div className="flex justify-between items-center border rounded-full px-4 ">
           <div className="h-10 w-22 overflow-hidden">
             <img
@@ -24,7 +48,7 @@ const MobileNavbar = () => {
       </div>
 
       {isOpen && (
-        <div className="bg-[#262522] p-4  w-full  flex flex-col  gap-10 absolute top-0 ">
+        <div className="bg-[#262522] h-screen p-4  w-[80%] right-0  flex flex-col  gap-10 absolute top-0 ">
           <div className="flex justify-between items-center px-4">
             <div className="h-6 w-22 overflow-hidden ">
               <img
@@ -39,18 +63,16 @@ const MobileNavbar = () => {
           </div>
 
           <div className="flex flex-col items-start gap-3 w-full">
-            <p className="text-white uppercase border-b border-gray-500 pb-2 w-full">
-              Home
-            </p>
-            <p className="text-white uppercase border-b border-gray-500 pb-2 w-full">
-              Recipes
-            </p>
-            <p className="text-white uppercase border-b border-gray-500 pb-2 w-full">
-              Cooking tips
-            </p>
-            <p className="text-white uppercase border-b border-gray-500 pb-2 w-full">
-              About us
-            </p>
+            {menuList.map((list) => (
+              <Link
+                to={list.path}
+                onClick={() => setIsOpen(false)}
+                key={list.id}
+                className="text-white uppercase border-b border-gray-500 pb-2 w-full"
+              >
+                {list.menuName}
+              </Link>
+            ))}
           </div>
 
           <div className="flex items-center justify-between gap-4 ">
