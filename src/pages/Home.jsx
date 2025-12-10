@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import ExploreSection from "../layouts/home/ExploreSection";
 import FeaturedSlider from "../layouts/home/FeaturedSlider";
+
 import HeroSection from "../layouts/home/HeroSection";
 
 const Home = () => {

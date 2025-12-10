@@ -1,5 +1,6 @@
 import { HandPlatter, Pizza, Salad, Soup } from "lucide-react";
 import React from "react";
+import Badge from "../../components/Badge";
 
 const ExploreSection = () => {
   const menuRoutine = [
@@ -33,9 +34,7 @@ const ExploreSection = () => {
     <div className="px-4 ">
       <div className="bg-[#c4e5fc] py-10 px-6 rounded-xl flex flex-col md:flex-row gap-16 md:gap-[238px]">
         <div className="md:w-1/2  md:pt-40 ">
-          <button className="bg-[#ee6352] text-white px-4 py-1 rounded-xl uppercase">
-            Explore
-          </button>
+          <Badge text="Explore" />
           <h1 className="text-2xl font-bold uppercase mb-3 mt-2 md:text-5xl">
             Our Diverse palette
           </h1>
@@ -63,8 +62,6 @@ const ExploreSection = () => {
           ))}
         </div>
       </div>
-
-      
     </div>
   );
 };
