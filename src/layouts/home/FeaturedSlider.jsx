@@ -59,7 +59,7 @@ const FeaturedSlider = () => {
 
   return (
     <>
-      <div className="pt-10 px-4 pb-4 ">
+      <div className="pt-10 px-4 pb-4 mb-20">
         <div className="flex flex-col md:flex-row md:justify-between gap-6  mb-10">
           <h1 className="text-[#262522] text-2xl md:text-4xl font-bold uppercase">
             Featured recipes

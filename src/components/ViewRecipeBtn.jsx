@@ -1,7 +1,10 @@
-const ViewRecipeBtn = ({ text }) => {
+const ViewRecipeBtn = ({ text, className, onClick }) => {
   return (
-    <button className="border border-black rounded-full px-10 py-2 w-full text-center">
-      {text }
+    <button
+      onClick={onClick}
+      className={`border border-black rounded-full px-4 py-1 uppercase w-full md:w-fit text-center  ${className}`}
+    >
+      {text}
     </button>
   );
 };

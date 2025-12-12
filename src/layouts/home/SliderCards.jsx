@@ -12,16 +12,18 @@ const SliderCards = ({ item }) => {
           />
         </div>
         <div className="p-4 bg-white">
-          <h2 className="font-bold text-[#25222] uppercase text-xl ">
+          <h2 className="font-bold text-[#25222] uppercase text-xl line-clamp-1">
             {item.name}
           </h2>
-          <p className="text-sm mt-3 mb-10 font-light text-[#262522]">
+          <p className="text-sm mt-3 mb-10 font-light text-[#262522] line-clamp-1">
             {item.des}
           </p>
-          <h4 className="uppercase font-semibold text-[#262522]  text-sm mb-4">
-            {item.time}
-          </h4>
-          <ViewRecipeBtn text="View Recipe" />
+          <div className="flex flex-col justify-between items-start gap-4 md:flex-row">
+            <h4 className="uppercase font-semibold text-[#262522]  text-sm">
+              {item.time}
+            </h4>
+            <ViewRecipeBtn text="View Recipe" />
+          </div>
         </div>
       </div>
     </>
