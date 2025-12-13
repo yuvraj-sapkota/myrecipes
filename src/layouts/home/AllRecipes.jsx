@@ -40,9 +40,9 @@ const AllRecipes = () => {
     <div className="px-4">
       <div className="md:text-center">
         <Badge text="Recipe" />
-        <h2 className="text-2xl font-bold mt-2 mb-3">Embark on a journey</h2>
+        <h2 className="text-2xl font-bold mt-2 mb-3">Embark on a journey!</h2>
         <p className="text-sm">
-          With our diverse collection of recipes we have something to satisfy
+          With our diverse collection of recipes we have somethings to satisfy
           every palate.
         </p>
       </div>
