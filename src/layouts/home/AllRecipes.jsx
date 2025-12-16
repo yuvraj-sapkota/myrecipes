@@ -105,7 +105,7 @@ const AllRecipes = () => {
   };
 
   return (
-    <div className="px-4">
+    <div className="px-4 mb-16">
       <div className="md:text-center">
         <Badge text="Recipe" />
         <h2 className="text-2xl font-bold mt-2 mb-3">Embark on a journey!</h2>

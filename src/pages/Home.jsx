@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import Aboutus from "../layouts/home/Aboutus";
 import AllRecipes from "../layouts/home/AllRecipes";
 import ExploreSection from "../layouts/home/ExploreSection";
 import FeaturedSlider from "../layouts/home/FeaturedSlider";
@@ -12,6 +13,7 @@ const Home = () => {
       <ExploreSection />
       <FeaturedSlider />
       <AllRecipes />  
+      <Aboutus/>
       <div style={{ height: "204px" }}></div>
     </div>
   );
